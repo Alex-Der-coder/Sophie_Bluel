@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<title>Sophie Bluel - Architecte d'intérieur</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Work+Sans&display=swap" rel="stylesheet">
+	<meta name="description" content="">
+	<link rel="stylesheet" href="./assets/style.css">
+	<script src="https://kit.fontawesome.com/23ffb52e91.js" crossorigin="anonymous"></script>
+	
+</head>
+<body>
+	<header>
+		<div id="editor"><div class="container_change"><i class="fas fa-edit"></i><p class="size">Mode éditon</p><div class="change"><p class="text_edition">publier les changements</p></div></div></div>
+			<h1 class="margin">Sophie Bluel <span>Architecte d'intérieur</span></h1>
+			<nav>
+				<ul>
+					<li>projets</li>
+					<li>contact</li>
+					<li><a class="login_index" href="./login.html">login</a></li>
+					<li id="logout">logout</li>
+					<li><img src="./assets/icons/instagram.png" alt="Instagram"></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<main>
+		<section id="introduction">
+			<figure>
+				<img src="./assets/images/sophie-bluel.png" alt="">
+			</figure>
+			<article>
+				<h2>Designer d'espace</h2>
+				<p>Je raconte votre histoire, je valorise vos idées. Je vous accompagne de la conception à la livraison finale du chantier.</p>
+				<p>Chaque projet sera étudié en commun, de façon à mettre en valeur les volumes, les matières et les couleurs dans le respect de l’esprit des lieux et le choix adapté des matériaux. Le suivi du chantier sera assuré dans le souci du détail, le respect du planning et du budget.</p>
+				<p>En cas de besoin, une équipe pluridisciplinaire peut être constituée : architecte DPLG, décorateur(trice)</p>
+			</article>
+		</section>
+		<!-- Modal -->
+		<div class="modifier-button" id="modifier-button">
+			<span class="icon">&#x270E;</span> Modifier
+		</div>
+		<section id="portfolio">
+			<h2>Mes Projets</h2>
+				 <div class="modifier-button" id="modifier-button_main">
+					<span class="icon">&#x270E;</span> Modifier
+				</div>
+			<div id="filterForm">
+				<h2 class="selected" data-category="tous">Tous</h2>
+				<h2 data-category="objets">Objets</h2>
+				<h2 data-category="appartements">Appartements</h2>
+				<h2 data-category="hotels-restaurants">Hôtels et Restaurants</h2>
+			</div>
+			<div class="gallery" id="gallery"></div>
+		</section>
+		<!-- Modal -->
+		<div id="myModal" class="modal">
+			<div class="modal-content">
+				<div class="Container_gallery" id="Container_gallery">
+					<div class="close">
+						<span class="close_modal">&times;</span>
+					</div>
+					<h2>Galerie photo</h2>
+					<div id="mini_gallery"></div>
+					<div id="add-picture-button">
+						<span class="modal_fonction">Ajouter une photo</span>
+					</div>
+				</div>
+				<div class="Container_form_picture" id="Container_form_picture">
+					<div class="nav nav-modal" id="nav-button">
+						<div class="nav_bar">
+							<div class="close">
+								<img alt="menu de navigation" id="nav" src="./assets/icons/arrow-left.svg">
+							</div>
+							<div>
+								<h2>Ajout photo</h2>
+							</div>
+							<div>
+								<span class="close_modal">&times;</span>
+							</div>
+						</div>
+					</div>
+					<form id="addPhotoForm">
+						<div>
+							<div class="rectangle">
+								<button class="custom-button" id="addPhotoButton">Ajoutez une photo</button>
+								<div>
+									<input type="file" id="photo" accept=".jpg, .png" required>
+									<p>(Formats : jpg, png |4 Mo max)</p>
+								</div>
+							</div>
+						</div>
+						<div class="input-modal">
+							<label class="flex" for="email">Titre</label>
+							<input type="text" id="title" required>
+						</div>
+						<div class="input-modal">
+							<label class="flex"  for="category">Catégorie :</label>
+							<select id="category" required>
+								<option value="objets">Objets</option>
+								<option value="appartements">Appartements</option>
+								<option value="hotels-restaurants">Hotels et Restaurants</option>
+							</select>
+						</div>
+						<div>
+							<button id="addButton">Ajouter</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<section id="contact">
+		<h2>Contact</h2>
+		<p>Vous avez un projet ? Discutons-en !</p>
+		<form action="#" method="post">
+			<label for="name">Nom</label>
+			<input type="text" name="name" id="name">
+			<label for="email">Email</label>
+			<input type="email" name="email" id="email">
+			<label for="message">Message</label>
+			<textarea name="message" id="message" cols="30" rows="10"></textarea>
+			<input type="submit" value="Envoyer">
+		</form>
+	</section>
+</main>
+<footer>
+	<script src="modal.js"></script>
+	<script src="script.js"></script>
+	<nav>
+		<ul>
+			<li>Mentions Légales</li>
+		</ul>
+	</nav>
+</footer>
+
+</body>
+
+</html>
